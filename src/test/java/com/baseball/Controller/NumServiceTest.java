@@ -1,16 +1,16 @@
 package com.baseball.Controller;
 
+import com.baseball.Service.NumService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class NumControllerTest {
-    NumController numController = new NumController();
-    List<Integer> numbers = numController.getNum();
+class NumServiceTest {
+    NumService numService = new NumService();
+    List<Integer> numbers = numService.getNum();
     @Test
     @DisplayName("난수 길이 테스트 ")
     void checkLength() {

@@ -1,8 +1,8 @@
-package com.baseball.Controller;
+package com.baseball.Service;
 
 import java.util.*;
 
-public class NumController {
+public class NumService {
 
     public List<Integer> getNum() {
         Random random = new Random();
