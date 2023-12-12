@@ -15,12 +15,16 @@ public class OutputView {
         System.out.println(GAME_END);
     }
 
-    public void gameCount() {
-        System.out.println(GAME_END_TRY);
+    public void gameCount(int n) {
+
+        System.out.println(n+GAME_END_TRY);
     }
 
     public void tryCount() {
         System.out.println(GAME_TRY_COUNT);
     }
 
+    public void displayResult(int ball, int strike) {
+        System.out.println(ball+"B"+strike+"S");
+    }
 }

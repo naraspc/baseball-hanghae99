@@ -3,7 +3,7 @@ package com.baseball.Service;
 public class ValidateService {
     public static void validate(String playerNumber) {
         if (hasDuplicate(playerNumber)) {
-            throw new IllegalArgumentException("잘못된 입력입니다. 중복된 값이 있습니다.");
+            throw new IllegalArgumentException("잘못된 입력입니다. 중복된 값이 있습니다. ");
         }
 
         if (!isNumeric(playerNumber)) {
