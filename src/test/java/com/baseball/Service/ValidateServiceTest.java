@@ -1,29 +1,41 @@
 package com.baseball.Service;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class ValidateServiceTest {
     @Test
+    @DisplayName("유효값 검증")
     public void testValidateValidInput() {
-        // 유효한 입력에 대한 테스트
         ValidateService.validate("123"); // 예외가 발생하지 않아야 함
     }
 
     @Test
+    @DisplayName("중복값 검증")
     public void testValidateInvalidDuplicateInput() {
-        // 중복된 값이 있는 입력에 대한 테스트
         assertThrows(IllegalArgumentException.class, () -> {
-            ValidateService.validate("122"); // 중복이 있으므로 예외가 발생해야 함
+            ValidateService.validate("122");
         });
     }
 
     @Test
+    @DisplayName("숫자가 아닌 값 검증")
     public void testValidateInvalidNonNumericInput() {
-        // 숫자가 아닌 값이 있는 입력에 대한 테스트
         assertThrows(IllegalArgumentException.class, () -> {
-            ValidateService.validate("1a2"); // 숫자가 아닌 값이 있으므로 예외가 발생해야 함
+            ValidateService.validate("1a2");
         });
+    }
+    @Test
+    @DisplayName("3글자 이상 혹은 이하 출력")
+    public void testLength() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            ValidateService.validate("12");
+        });
+        assertThrows(IllegalArgumentException.class, () -> {
+            ValidateService.validate("12345");
+        });
+
     }
 }

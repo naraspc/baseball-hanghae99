@@ -9,6 +9,9 @@ public class ValidateService {
         if (!isNumeric(playerNumber)) {
             throw new IllegalArgumentException("잘못된 입력입니다. 숫자가 아닌 값이 있습니다.");
         }
+        if (playerNumber.length() != 3) {
+            throw new IllegalArgumentException("잘못된 입력입니다. 입력된 숫자가 많거나 적습니다.");
+        }
     }
 
     private static boolean hasDuplicate(String playerNumber) {
