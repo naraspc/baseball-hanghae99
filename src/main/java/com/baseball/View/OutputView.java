@@ -25,6 +25,11 @@ public class OutputView {
     }
 
     public void displayResult(int ball, int strike) {
+        if (ball == 0&& strike > 0) {
+            System.out.println(strike+"S");
+        } else if (ball > 0 && strike ==0) {
+            System.out.println(ball+"B");
+        } else
         System.out.println(ball+"B"+strike+"S");
     }
 }
