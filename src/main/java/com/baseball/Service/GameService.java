@@ -14,7 +14,7 @@ public class GameService {
         return result;
     }
 
-    private int findBall(List<Integer> randomNum, int[] playerNum) {
+    private int findBall(List<Integer> randomNum, int[] playerNum) { // 객체를 넣어 보기 // 일급 컬렉션
         int ball = 0;
 
         for (int i = 0; i < randomNum.size(); i++) {
