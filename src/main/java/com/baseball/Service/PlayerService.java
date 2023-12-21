@@ -1,7 +1,5 @@
 package com.baseball.Service;
 
-import java.util.Scanner;
-
 public class PlayerService {
     public int[] getPlayerNum(String playerNumber) {
         int[] playerNum = new int[3];
