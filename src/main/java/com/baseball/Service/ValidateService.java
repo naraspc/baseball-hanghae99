@@ -12,7 +12,7 @@ public class ValidateService {
         if (playerNumber.length() != 3) {
             throw new IllegalArgumentException("잘못된 입력입니다. 입력된 숫자가 많거나 적습니다.");
         }
-    }
+    } // 커스텀 익셉션을 만들어서 던져주고 OutputView에서 파싱해서 보여주기
 
     private static boolean hasDuplicate(String playerNumber) {
         for (int i = 0; i < playerNumber.length(); i++) {
